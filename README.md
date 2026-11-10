@@ -7,7 +7,7 @@ load-weight rules), recommends a route and says why. A corridor heatmap with a 0
 shows how the weather moves around the trip.
 
 - **Live app:** https://weather-truck-routing-phi.vercel.app
-- **Walkthrough (Loom):** _link added on submission_
+- **Walkthrough (Loom):** https://www.loom.com/share/25be9ac281e44c9aa983d939648ef231
 - **Full documentation (Word):** [docs/Weather-Aware-Truck-Routing.docx](docs/Weather-Aware-Truck-Routing.docx)
 
 ## Assessment requirements
