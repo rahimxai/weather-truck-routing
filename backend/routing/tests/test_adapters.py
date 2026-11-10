@@ -258,3 +258,23 @@ def test_open_meteo_rate_limit_waits_then_succeeds(apis, monkeypatch):
     apis.fail["api.open-meteo.com"] = [429]
     assert len(open_meteo.forecasts([(-90.0, 40.0)], DEPART, DEPART)) == 1
     assert waits == [2.0]
+
+
+def test_parse_route_reads_roads_and_states():
+    data = tt_route(WEST)
+    steps = data["guidance"]["instructions"]
+    for i, step in enumerate(steps):
+        step["stateCode"] = "IL" if i < 4 else "IA"
+    steps[1]["roadNumbers"] = ["I-88 W"]
+    steps[3]["roadNumbers"] = ["US-6 W", "I-80 W"]
+    route = tomtom.parse_route(data)
+    roads = [road for _, road in route.roads]
+    assert roads[:4] == [None, "I-88", None, "I-80"]
+    assert route.roads[1][0] > 0
+    assert route.state_codes[0] == "IL" and route.state_codes[-1] == "IA"
+
+
+def test_parse_route_without_road_numbers():
+    route = tomtom.parse_route(tt_route(WEST))
+    assert all(road is None for _, road in route.roads)
+    assert route.state_codes == []

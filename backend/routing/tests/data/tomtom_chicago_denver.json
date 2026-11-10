@@ -1,0 +1,1882 @@
+{
+ "note": "Real TomTom Calculate Route guidance (truck, Chicago to Denver), recorded 2026-11-10; points and messages removed.",
+ "routes": [
+  {
+   "lengthInMeters": 1618403,
+   "instructions": [
+    {
+     "routeOffsetInMeters": 0,
+     "travelTimeInSeconds": 0,
+     "street": "S Federal St",
+     "stateCode": "IL",
+     "countryCode": "USA",
+     "instructionType": "LOCATION_DEPARTURE"
+    },
+    {
+     "routeOffsetInMeters": 136,
+     "travelTimeInSeconds": 45,
+     "street": "W Van Buren St",
+     "stateCode": "IL",
+     "countryCode": "USA",
+     "instructionType": "TURN"
+    },
+    {
+     "routeOffsetInMeters": 219,
+     "travelTimeInSeconds": 84,
+     "street": "S Clark St",
+     "stateCode": "IL",
+     "countryCode": "USA",
+     "instructionType": "TURN"
+    },
+    {
+     "routeOffsetInMeters": 349,
+     "travelTimeInSeconds": 142,
+     "street": "W Ida B. Wells Dr",
+     "stateCode": "IL",
+     "countryCode": "USA",
+     "instructionType": "TURN"
+    },
+    {
+     "routeOffsetInMeters": 1166,
+     "travelTimeInSeconds": 236,
+     "roadNumbers": [
+      "I-290 W"
+     ],
+     "street": "Interstate Highway 290 W",
+     "stateCode": "IL",
+     "countryCode": "USA",
+     "instructionType": "TURN"
+    },
+    {
+     "routeOffsetInMeters": 1308,
+     "travelTimeInSeconds": 246,
+     "roadNumbers": [
+      "I-290 W"
+     ],
+     "street": "Interstate Highway 290 W",
+     "stateCode": "IL",
+     "countryCode": "USA",
+     "instructionType": "TURN"
+    },
+    {
+     "routeOffsetInMeters": 1618,
+     "travelTimeInSeconds": 266,
+     "roadNumbers": [
+      "I-290 W"
+     ],
+     "street": "Interstate Highway 290 W",
+     "stateCode": "IL",
+     "countryCode": "USA",
+     "instructionType": "DIRECTION_INFO"
+    },
+    {
+     "routeOffsetInMeters": 23287,
+     "travelTimeInSeconds": 2548,
+     "roadNumbers": [
+      "I-88 W"
+     ],
+     "street": "Interstate Highway 88 W",
+     "stateCode": "IL",
+     "countryCode": "USA",
+     "instructionType": "TURN"
+    },
+    {
+     "routeOffsetInMeters": 26324,
+     "travelTimeInSeconds": 2669,
+     "roadNumbers": [
+      "I-88 W"
+     ],
+     "street": "Interstate Highway 88 W",
+     "stateCode": "IL",
+     "countryCode": "USA",
+     "instructionType": "TURN"
+    },
+    {
+     "routeOffsetInMeters": 28134,
+     "travelTimeInSeconds": 2731,
+     "roadNumbers": [
+      "I-88 W"
+     ],
+     "street": "Interstate Highway 88 W",
+     "stateCode": "IL",
+     "countryCode": "USA",
+     "instructionType": "DIRECTION_INFO"
+    },
+    {
+     "routeOffsetInMeters": 59741,
+     "travelTimeInSeconds": 3805,
+     "roadNumbers": [
+      "I-88 W"
+     ],
+     "street": "Interstate Highway 88 W",
+     "stateCode": "IL",
+     "countryCode": "USA",
+     "instructionType": "TURN"
+    },
+    {
+     "routeOffsetInMeters": 60783,
+     "travelTimeInSeconds": 3841,
+     "roadNumbers": [
+      "I-88 W"
+     ],
+     "street": "Interstate Highway 88 W",
+     "stateCode": "IL",
+     "countryCode": "USA",
+     "instructionType": "DIRECTION_INFO"
+    },
+    {
+     "routeOffsetInMeters": 110739,
+     "travelTimeInSeconds": 5435,
+     "roadNumbers": [
+      "I-88 W"
+     ],
+     "street": "Interstate Highway 88 W",
+     "stateCode": "IL",
+     "countryCode": "USA",
+     "instructionType": "TURN"
+    },
+    {
+     "routeOffsetInMeters": 111789,
+     "travelTimeInSeconds": 5466,
+     "roadNumbers": [
+      "I-88 W"
+     ],
+     "street": "Interstate Highway 88 W",
+     "stateCode": "IL",
+     "countryCode": "USA",
+     "instructionType": "DIRECTION_INFO"
+    },
+    {
+     "routeOffsetInMeters": 158766,
+     "travelTimeInSeconds": 6883,
+     "roadNumbers": [
+      "I-88 W"
+     ],
+     "street": "Interstate Highway 88 W",
+     "stateCode": "IL",
+     "countryCode": "USA",
+     "instructionType": "TURN"
+    },
+    {
+     "routeOffsetInMeters": 159740,
+     "travelTimeInSeconds": 6913,
+     "roadNumbers": [
+      "I-88 W"
+     ],
+     "street": "Interstate Highway 88 W",
+     "stateCode": "IL",
+     "countryCode": "USA",
+     "instructionType": "DIRECTION_INFO"
+    },
+    {
+     "routeOffsetInMeters": 248488,
+     "travelTimeInSeconds": 9659,
+     "roadNumbers": [
+      "I-80 W"
+     ],
+     "street": "Interstate Highway 80 W",
+     "stateCode": "IL",
+     "countryCode": "USA",
+     "instructionType": "TURN"
+    },
+    {
+     "routeOffsetInMeters": 249132,
+     "travelTimeInSeconds": 9686,
+     "roadNumbers": [
+      "I-80 W"
+     ],
+     "street": "Interstate Highway 80 W",
+     "stateCode": "IL",
+     "countryCode": "USA",
+     "instructionType": "TURN"
+    },
+    {
+     "routeOffsetInMeters": 250117,
+     "travelTimeInSeconds": 9729,
+     "roadNumbers": [
+      "I-80 W"
+     ],
+     "street": "Interstate Highway 80 W",
+     "stateCode": "IL",
+     "countryCode": "USA",
+     "instructionType": "ROAD_CHANGE"
+    },
+    {
+     "routeOffsetInMeters": 549243,
+     "travelTimeInSeconds": 19053,
+     "roadNumbers": [
+      "I-80 W"
+     ],
+     "street": "Interstate Highway 80 W",
+     "stateCode": "IA",
+     "countryCode": "USA",
+     "instructionType": "TURN"
+    },
+    {
+     "routeOffsetInMeters": 550359,
+     "travelTimeInSeconds": 19098,
+     "roadNumbers": [
+      "I-80 W"
+     ],
+     "street": "Interstate Highway 80 W",
+     "stateCode": "IA",
+     "countryCode": "USA",
+     "instructionType": "ROAD_CHANGE"
+    },
+    {
+     "routeOffsetInMeters": 551574,
+     "travelTimeInSeconds": 19142,
+     "roadNumbers": [
+      "I-80 W"
+     ],
+     "street": "Interstate Highway 80 W",
+     "stateCode": "IA",
+     "countryCode": "USA",
+     "instructionType": "TURN"
+    },
+    {
+     "routeOffsetInMeters": 552109,
+     "travelTimeInSeconds": 19161,
+     "roadNumbers": [
+      "I-80 W"
+     ],
+     "street": "Interstate Highway 80 W",
+     "stateCode": "IA",
+     "countryCode": "USA",
+     "instructionType": "DIRECTION_INFO"
+    },
+    {
+     "routeOffsetInMeters": 761657,
+     "travelTimeInSeconds": 25701,
+     "roadNumbers": [
+      "I-80 W"
+     ],
+     "street": "Interstate Highway 80 W",
+     "stateCode": "NE",
+     "countryCode": "USA",
+     "instructionType": "TURN"
+    },
+    {
+     "routeOffsetInMeters": 762222,
+     "travelTimeInSeconds": 25721,
+     "roadNumbers": [
+      "I-80 W"
+     ],
+     "street": "Interstate Highway 80 W",
+     "stateCode": "NE",
+     "countryCode": "USA",
+     "instructionType": "DIRECTION_INFO"
+    },
+    {
+     "routeOffsetInMeters": 1313018,
+     "travelTimeInSeconds": 42251,
+     "roadNumbers": [
+      "I-76 W"
+     ],
+     "street": "Interstate Highway 76 W",
+     "stateCode": "NE",
+     "countryCode": "USA",
+     "instructionType": "TURN"
+    },
+    {
+     "routeOffsetInMeters": 1596192,
+     "travelTimeInSeconds": 50478,
+     "roadNumbers": [
+      "I-76 W",
+      "US-85 S",
+      "US-6 W"
+     ],
+     "street": "Interstate Highway 76 W",
+     "stateCode": "CO",
+     "countryCode": "USA",
+     "instructionType": "TURN"
+    },
+    {
+     "routeOffsetInMeters": 1599309,
+     "travelTimeInSeconds": 50580,
+     "roadNumbers": [
+      "I-76 W"
+     ],
+     "street": "Interstate Highway 76 W",
+     "stateCode": "CO",
+     "countryCode": "USA",
+     "instructionType": "TURN"
+    },
+    {
+     "routeOffsetInMeters": 1599874,
+     "travelTimeInSeconds": 50598,
+     "roadNumbers": [
+      "I-76 W"
+     ],
+     "street": "Interstate Highway 76 W",
+     "stateCode": "CO",
+     "countryCode": "USA",
+     "instructionType": "DIRECTION_INFO"
+    },
+    {
+     "routeOffsetInMeters": 1605598,
+     "travelTimeInSeconds": 50786,
+     "roadNumbers": [
+      "I-25 S",
+      "US-87 S"
+     ],
+     "street": "I-25",
+     "stateCode": "CO",
+     "countryCode": "USA",
+     "instructionType": "TURN"
+    },
+    {
+     "routeOffsetInMeters": 1607396,
+     "travelTimeInSeconds": 50865,
+     "roadNumbers": [
+      "I-25 S",
+      "US-87 S"
+     ],
+     "street": "I-25",
+     "stateCode": "CO",
+     "countryCode": "USA",
+     "instructionType": "ROAD_CHANGE"
+    },
+    {
+     "routeOffsetInMeters": 1607860,
+     "travelTimeInSeconds": 50882,
+     "roadNumbers": [
+      "I-25 S",
+      "US-87 S"
+     ],
+     "street": "I-25",
+     "stateCode": "CO",
+     "countryCode": "USA",
+     "instructionType": "TURN"
+    },
+    {
+     "routeOffsetInMeters": 1608365,
+     "travelTimeInSeconds": 50901,
+     "roadNumbers": [
+      "I-25 S",
+      "US-87 S"
+     ],
+     "street": "I-25",
+     "stateCode": "CO",
+     "countryCode": "USA",
+     "instructionType": "DIRECTION_INFO"
+    },
+    {
+     "routeOffsetInMeters": 1615763,
+     "travelTimeInSeconds": 51181,
+     "roadNumbers": [
+      "I-70 Bus W",
+      "US-287 N",
+      "US-40 W"
+     ],
+     "street": "W Colfax Ave",
+     "stateCode": "CO",
+     "countryCode": "USA",
+     "instructionType": "TURN"
+    },
+    {
+     "routeOffsetInMeters": 1616149,
+     "travelTimeInSeconds": 51219,
+     "roadNumbers": [
+      "I-70 Bus E",
+      "US-287 S",
+      "US-40 E"
+     ],
+     "street": "W Colfax Ave",
+     "stateCode": "CO",
+     "countryCode": "USA",
+     "instructionType": "TURN"
+    },
+    {
+     "routeOffsetInMeters": 1618313,
+     "travelTimeInSeconds": 51487,
+     "street": "N Bannock St",
+     "stateCode": "CO",
+     "countryCode": "USA",
+     "instructionType": "LOCATION_ARRIVAL"
+    },
+    {
+     "routeOffsetInMeters": 1618403,
+     "travelTimeInSeconds": 51513,
+     "street": "N Bannock St",
+     "stateCode": "CO",
+     "countryCode": "USA",
+     "instructionType": "LOCATION_ARRIVAL"
+    }
+   ]
+  },
+  {
+   "lengthInMeters": 1871629,
+   "instructions": [
+    {
+     "routeOffsetInMeters": 0,
+     "travelTimeInSeconds": 0,
+     "street": "S Federal St",
+     "stateCode": "IL",
+     "countryCode": "USA",
+     "instructionType": "LOCATION_DEPARTURE"
+    },
+    {
+     "routeOffsetInMeters": 136,
+     "travelTimeInSeconds": 45,
+     "street": "W Van Buren St",
+     "stateCode": "IL",
+     "countryCode": "USA",
+     "instructionType": "TURN"
+    },
+    {
+     "routeOffsetInMeters": 219,
+     "travelTimeInSeconds": 84,
+     "street": "S Clark St",
+     "stateCode": "IL",
+     "countryCode": "USA",
+     "instructionType": "TURN"
+    },
+    {
+     "routeOffsetInMeters": 349,
+     "travelTimeInSeconds": 142,
+     "street": "W Ida B. Wells Dr",
+     "stateCode": "IL",
+     "countryCode": "USA",
+     "instructionType": "TURN"
+    },
+    {
+     "routeOffsetInMeters": 1166,
+     "travelTimeInSeconds": 236,
+     "roadNumbers": [
+      "I-94 E",
+      "I-90 E"
+     ],
+     "street": "Interstate Highway 90 E",
+     "stateCode": "IL",
+     "countryCode": "USA",
+     "instructionType": "TURN"
+    },
+    {
+     "routeOffsetInMeters": 1250,
+     "travelTimeInSeconds": 242,
+     "roadNumbers": [
+      "I-94 E",
+      "I-90 E"
+     ],
+     "street": "Interstate Highway 90 E",
+     "stateCode": "IL",
+     "countryCode": "USA",
+     "instructionType": "TURN"
+    },
+    {
+     "routeOffsetInMeters": 2109,
+     "travelTimeInSeconds": 305,
+     "roadNumbers": [
+      "I-94 E",
+      "I-90 E"
+     ],
+     "street": "Interstate Highway 90 E",
+     "stateCode": "IL",
+     "countryCode": "USA",
+     "instructionType": "TURN"
+    },
+    {
+     "routeOffsetInMeters": 2257,
+     "travelTimeInSeconds": 315,
+     "roadNumbers": [
+      "I-94 E",
+      "I-90 E"
+     ],
+     "street": "Interstate Highway 90 E",
+     "stateCode": "IL",
+     "countryCode": "USA",
+     "instructionType": "ROAD_CHANGE"
+    },
+    {
+     "routeOffsetInMeters": 3770,
+     "travelTimeInSeconds": 384,
+     "roadNumbers": [
+      "I-94 E",
+      "I-90 E"
+     ],
+     "street": "Interstate Highway 90 E",
+     "stateCode": "IL",
+     "countryCode": "USA",
+     "instructionType": "TURN"
+    },
+    {
+     "routeOffsetInMeters": 5683,
+     "travelTimeInSeconds": 472,
+     "roadNumbers": [
+      "I-94 E",
+      "I-90 E"
+     ],
+     "street": "Interstate Highway 90 E",
+     "stateCode": "IL",
+     "countryCode": "USA",
+     "instructionType": "TURN"
+    },
+    {
+     "routeOffsetInMeters": 6113,
+     "travelTimeInSeconds": 491,
+     "roadNumbers": [
+      "I-94 E",
+      "I-90 E"
+     ],
+     "street": "Interstate Highway 90 E",
+     "stateCode": "IL",
+     "countryCode": "USA",
+     "instructionType": "DIRECTION_INFO"
+    },
+    {
+     "routeOffsetInMeters": 13286,
+     "travelTimeInSeconds": 825,
+     "roadNumbers": [
+      "I-94 E"
+     ],
+     "street": "Interstate Highway 94 E",
+     "stateCode": "IL",
+     "countryCode": "USA",
+     "instructionType": "TURN"
+    },
+    {
+     "routeOffsetInMeters": 13716,
+     "travelTimeInSeconds": 848,
+     "roadNumbers": [
+      "I-94 E"
+     ],
+     "street": "Interstate Highway 94 E",
+     "stateCode": "IL",
+     "countryCode": "USA",
+     "instructionType": "DIRECTION_INFO"
+    },
+    {
+     "routeOffsetInMeters": 19864,
+     "travelTimeInSeconds": 1232,
+     "roadNumbers": [
+      "I-57 S"
+     ],
+     "street": "Interstate Highway 57 S",
+     "stateCode": "IL",
+     "countryCode": "USA",
+     "instructionType": "TURN"
+    },
+    {
+     "routeOffsetInMeters": 20369,
+     "travelTimeInSeconds": 1259,
+     "roadNumbers": [
+      "I-57 S"
+     ],
+     "street": "Interstate Highway 57 S",
+     "stateCode": "IL",
+     "countryCode": "USA",
+     "instructionType": "DIRECTION_INFO"
+    },
+    {
+     "routeOffsetInMeters": 41423,
+     "travelTimeInSeconds": 2045,
+     "roadNumbers": [
+      "I-57 S"
+     ],
+     "street": "Interstate Highway 57 S",
+     "stateCode": "IL",
+     "countryCode": "USA",
+     "instructionType": "TURN"
+    },
+    {
+     "routeOffsetInMeters": 41928,
+     "travelTimeInSeconds": 2064,
+     "roadNumbers": [
+      "I-57 S"
+     ],
+     "street": "Interstate Highway 57 S",
+     "stateCode": "IL",
+     "countryCode": "USA",
+     "instructionType": "DIRECTION_INFO"
+    },
+    {
+     "routeOffsetInMeters": 47896,
+     "travelTimeInSeconds": 2285,
+     "roadNumbers": [
+      "US-30 W"
+     ],
+     "street": "Lincoln Hwy",
+     "stateCode": "IL",
+     "countryCode": "USA",
+     "instructionType": "TURN"
+    },
+    {
+     "routeOffsetInMeters": 57198,
+     "travelTimeInSeconds": 2908,
+     "roadNumbers": [
+      "US-45 S"
+     ],
+     "street": "S La Grange Rd",
+     "stateCode": "IL",
+     "countryCode": "USA",
+     "instructionType": "TURN"
+    },
+    {
+     "routeOffsetInMeters": 57481,
+     "travelTimeInSeconds": 2938,
+     "roadNumbers": [
+      "US-45 S"
+     ],
+     "street": "S La Grange Rd",
+     "stateCode": "IL",
+     "countryCode": "USA",
+     "instructionType": "DIRECTION_INFO"
+    },
+    {
+     "routeOffsetInMeters": 91549,
+     "travelTimeInSeconds": 4698,
+     "street": "E 6000N Rd",
+     "stateCode": "IL",
+     "countryCode": "USA",
+     "instructionType": "TURN"
+    },
+    {
+     "routeOffsetInMeters": 92191,
+     "travelTimeInSeconds": 4757,
+     "roadNumbers": [
+      "I-57 S"
+     ],
+     "street": "Interstate Highway 57 S",
+     "stateCode": "IL",
+     "countryCode": "USA",
+     "instructionType": "TURN"
+    },
+    {
+     "routeOffsetInMeters": 92804,
+     "travelTimeInSeconds": 4794,
+     "roadNumbers": [
+      "I-57 S"
+     ],
+     "street": "Interstate Highway 57 S",
+     "stateCode": "IL",
+     "countryCode": "USA",
+     "instructionType": "ROAD_CHANGE"
+    },
+    {
+     "routeOffsetInMeters": 92904,
+     "travelTimeInSeconds": 4797,
+     "roadNumbers": [
+      "I-57 S"
+     ],
+     "street": "Interstate Highway 57 S",
+     "stateCode": "IL",
+     "countryCode": "USA",
+     "instructionType": "DIRECTION_INFO"
+    },
+    {
+     "routeOffsetInMeters": 226216,
+     "travelTimeInSeconds": 8960,
+     "roadNumbers": [
+      "I-72 W"
+     ],
+     "street": "Interstate Highway 72 W",
+     "stateCode": "IL",
+     "countryCode": "USA",
+     "instructionType": "TURN"
+    },
+    {
+     "routeOffsetInMeters": 226920,
+     "travelTimeInSeconds": 8994,
+     "roadNumbers": [
+      "I-72 W"
+     ],
+     "street": "Interstate Highway 72 W",
+     "stateCode": "IL",
+     "countryCode": "USA",
+     "instructionType": "ROAD_CHANGE"
+    },
+    {
+     "routeOffsetInMeters": 353068,
+     "travelTimeInSeconds": 12822,
+     "roadNumbers": [
+      "I-72 W",
+      "US-36 W"
+     ],
+     "street": "Interstate Highway 72 W",
+     "stateCode": "IL",
+     "countryCode": "USA",
+     "instructionType": "TURN"
+    },
+    {
+     "routeOffsetInMeters": 353608,
+     "travelTimeInSeconds": 12854,
+     "roadNumbers": [
+      "I-55 S",
+      "I-72 W",
+      "US-36 W"
+     ],
+     "street": "Interstate Highway 55 S",
+     "stateCode": "IL",
+     "countryCode": "USA",
+     "instructionType": "TURN"
+    },
+    {
+     "routeOffsetInMeters": 354173,
+     "travelTimeInSeconds": 12873,
+     "roadNumbers": [
+      "I-55 S",
+      "I-72 W",
+      "US-36 W"
+     ],
+     "street": "Interstate Highway 55 S",
+     "stateCode": "IL",
+     "countryCode": "USA",
+     "instructionType": "DIRECTION_INFO"
+    },
+    {
+     "routeOffsetInMeters": 361580,
+     "travelTimeInSeconds": 13115,
+     "roadNumbers": [
+      "I-55 S"
+     ],
+     "street": "Interstate Highway 55 S",
+     "stateCode": "IL",
+     "countryCode": "USA",
+     "instructionType": "TURN"
+    },
+    {
+     "routeOffsetInMeters": 362160,
+     "travelTimeInSeconds": 13134,
+     "roadNumbers": [
+      "I-55 S"
+     ],
+     "street": "Interstate Highway 55 S",
+     "stateCode": "IL",
+     "countryCode": "USA",
+     "instructionType": "DIRECTION_INFO"
+    },
+    {
+     "routeOffsetInMeters": 478819,
+     "travelTimeInSeconds": 16692,
+     "roadNumbers": [
+      "I-270 W"
+     ],
+     "street": "Interstate Highway 270 W",
+     "stateCode": "IL",
+     "countryCode": "USA",
+     "instructionType": "TURN"
+    },
+    {
+     "routeOffsetInMeters": 479440,
+     "travelTimeInSeconds": 16716,
+     "roadNumbers": [
+      "I-270 W"
+     ],
+     "street": "Interstate Highway 270 W",
+     "stateCode": "IL",
+     "countryCode": "USA",
+     "instructionType": "ROAD_CHANGE"
+    },
+    {
+     "routeOffsetInMeters": 525747,
+     "travelTimeInSeconds": 18299,
+     "roadNumbers": [
+      "I-70 W"
+     ],
+     "street": "Interstate Highway 70 W",
+     "stateCode": "MO",
+     "countryCode": "USA",
+     "instructionType": "TURN"
+    },
+    {
+     "routeOffsetInMeters": 526821,
+     "travelTimeInSeconds": 18343,
+     "roadNumbers": [
+      "I-70 W"
+     ],
+     "street": "Interstate Highway 70 W",
+     "stateCode": "MO",
+     "countryCode": "USA",
+     "instructionType": "TURN"
+    },
+    {
+     "routeOffsetInMeters": 527661,
+     "travelTimeInSeconds": 18380,
+     "roadNumbers": [
+      "I-70 W"
+     ],
+     "street": "Interstate Highway 70 W",
+     "stateCode": "MO",
+     "countryCode": "USA",
+     "instructionType": "ROAD_CHANGE"
+    },
+    {
+     "routeOffsetInMeters": 532007,
+     "travelTimeInSeconds": 18530,
+     "roadNumbers": [
+      "I-70 W"
+     ],
+     "street": "Interstate Highway 70 W",
+     "stateCode": "MO",
+     "countryCode": "USA",
+     "instructionType": "TURN"
+    },
+    {
+     "routeOffsetInMeters": 532542,
+     "travelTimeInSeconds": 18549,
+     "roadNumbers": [
+      "I-70 W"
+     ],
+     "street": "Interstate Highway 70 W",
+     "stateCode": "MO",
+     "countryCode": "USA",
+     "instructionType": "DIRECTION_INFO"
+    },
+    {
+     "routeOffsetInMeters": 887476,
+     "travelTimeInSeconds": 29992,
+     "roadNumbers": [
+      "I-70 W"
+     ],
+     "street": "Interstate Highway 70 W",
+     "stateCode": "MO",
+     "countryCode": "USA",
+     "instructionType": "TURN"
+    },
+    {
+     "routeOffsetInMeters": 888041,
+     "travelTimeInSeconds": 30011,
+     "roadNumbers": [
+      "I-70 W"
+     ],
+     "street": "Interstate Highway 70 W",
+     "stateCode": "MO",
+     "countryCode": "USA",
+     "instructionType": "DIRECTION_INFO"
+    },
+    {
+     "routeOffsetInMeters": 896960,
+     "travelTimeInSeconds": 30349,
+     "roadNumbers": [
+      "I-670 W"
+     ],
+     "street": "Interstate Highway 670 W",
+     "stateCode": "MO",
+     "countryCode": "USA",
+     "instructionType": "TURN"
+    },
+    {
+     "routeOffsetInMeters": 897401,
+     "travelTimeInSeconds": 30369,
+     "roadNumbers": [
+      "I-670 W"
+     ],
+     "street": "Interstate Highway 670 W",
+     "stateCode": "MO",
+     "countryCode": "USA",
+     "instructionType": "TURN"
+    },
+    {
+     "routeOffsetInMeters": 898785,
+     "travelTimeInSeconds": 30434,
+     "roadNumbers": [
+      "I-670 W"
+     ],
+     "street": "Interstate Highway 670 W",
+     "stateCode": "MO",
+     "countryCode": "USA",
+     "instructionType": "TURN"
+    },
+    {
+     "routeOffsetInMeters": 899215,
+     "travelTimeInSeconds": 30454,
+     "roadNumbers": [
+      "I-670 W"
+     ],
+     "street": "Interstate Highway 670 W",
+     "stateCode": "MO",
+     "countryCode": "USA",
+     "instructionType": "DIRECTION_INFO"
+    },
+    {
+     "routeOffsetInMeters": 905961,
+     "travelTimeInSeconds": 30702,
+     "roadNumbers": [
+      "I-70 W",
+      "US-24 W",
+      "US-40 W"
+     ],
+     "street": "Interstate Highway 70 W",
+     "stateCode": "KS",
+     "countryCode": "USA",
+     "instructionType": "TURN"
+    },
+    {
+     "routeOffsetInMeters": 906541,
+     "travelTimeInSeconds": 30720,
+     "roadNumbers": [
+      "I-70 W",
+      "US-24 W",
+      "US-40 W"
+     ],
+     "street": "Interstate Highway 70 W",
+     "stateCode": "KS",
+     "countryCode": "USA",
+     "instructionType": "DIRECTION_INFO"
+    },
+    {
+     "routeOffsetInMeters": 918626,
+     "travelTimeInSeconds": 31111,
+     "roadNumbers": [
+      "I-70 W",
+      "US-24 W",
+      "US-40 W"
+     ],
+     "street": "Interstate Highway 70 W",
+     "stateCode": "KS",
+     "countryCode": "USA",
+     "instructionType": "TURN"
+    },
+    {
+     "routeOffsetInMeters": 919221,
+     "travelTimeInSeconds": 31130,
+     "roadNumbers": [
+      "I-70 W",
+      "US-24 W",
+      "US-40 W"
+     ],
+     "street": "Interstate Highway 70 W",
+     "stateCode": "KS",
+     "countryCode": "USA",
+     "instructionType": "DIRECTION_INFO"
+    },
+    {
+     "routeOffsetInMeters": 936289,
+     "travelTimeInSeconds": 31644,
+     "roadNumbers": [
+      "I-70 W"
+     ],
+     "street": "Interstate Highway 70 W",
+     "stateCode": "KS",
+     "countryCode": "USA",
+     "instructionType": "TURN"
+    },
+    {
+     "routeOffsetInMeters": 937394,
+     "travelTimeInSeconds": 31677,
+     "roadNumbers": [
+      "I-70 W"
+     ],
+     "street": "Interstate Highway 70 W",
+     "stateCode": "KS",
+     "countryCode": "USA",
+     "instructionType": "DIRECTION_INFO"
+    },
+    {
+     "routeOffsetInMeters": 989885,
+     "travelTimeInSeconds": 33218,
+     "roadNumbers": [
+      "I-70 W"
+     ],
+     "street": "Interstate Highway 70 W",
+     "stateCode": "KS",
+     "countryCode": "USA",
+     "instructionType": "TURN"
+    },
+    {
+     "routeOffsetInMeters": 990184,
+     "travelTimeInSeconds": 33227,
+     "roadNumbers": [
+      "I-70 W"
+     ],
+     "street": "Interstate Highway 70 W",
+     "stateCode": "KS",
+     "countryCode": "USA",
+     "instructionType": "TURN"
+    },
+    {
+     "routeOffsetInMeters": 990779,
+     "travelTimeInSeconds": 33245,
+     "roadNumbers": [
+      "I-70 W"
+     ],
+     "street": "Interstate Highway 70 W",
+     "stateCode": "KS",
+     "countryCode": "USA",
+     "instructionType": "DIRECTION_INFO"
+    },
+    {
+     "routeOffsetInMeters": 996800,
+     "travelTimeInSeconds": 33438,
+     "roadNumbers": [
+      "I-70 W",
+      "US-40 W",
+      "KS-4 W"
+     ],
+     "street": "Kansas State Highway 4 W",
+     "stateCode": "KS",
+     "countryCode": "USA",
+     "instructionType": "TURN"
+    },
+    {
+     "routeOffsetInMeters": 997335,
+     "travelTimeInSeconds": 33458,
+     "roadNumbers": [
+      "I-70 W",
+      "US-40 W",
+      "KS-4 W"
+     ],
+     "street": "Kansas State Highway 4 W",
+     "stateCode": "KS",
+     "countryCode": "USA",
+     "instructionType": "DIRECTION_INFO"
+    },
+    {
+     "routeOffsetInMeters": 1848458,
+     "travelTimeInSeconds": 58583,
+     "roadNumbers": [
+      "I-70 W",
+      "US-36 W"
+     ],
+     "street": "United States Highway 36 W",
+     "stateCode": "CO",
+     "countryCode": "USA",
+     "instructionType": "TURN"
+    },
+    {
+     "routeOffsetInMeters": 1849862,
+     "travelTimeInSeconds": 58635,
+     "roadNumbers": [
+      "I-70 W"
+     ],
+     "street": "Interstate Highway 70 W",
+     "stateCode": "CO",
+     "countryCode": "USA",
+     "instructionType": "TURN"
+    },
+    {
+     "routeOffsetInMeters": 1850367,
+     "travelTimeInSeconds": 58654,
+     "roadNumbers": [
+      "I-70 W"
+     ],
+     "street": "Interstate Highway 70 W",
+     "stateCode": "CO",
+     "countryCode": "USA",
+     "instructionType": "DIRECTION_INFO"
+    },
+    {
+     "routeOffsetInMeters": 1858364,
+     "travelTimeInSeconds": 58947,
+     "roadNumbers": [
+      "I-70 W"
+     ],
+     "street": "Interstate Highway 70 W",
+     "stateCode": "CO",
+     "countryCode": "USA",
+     "instructionType": "TURN"
+    },
+    {
+     "routeOffsetInMeters": 1861530,
+     "travelTimeInSeconds": 59064,
+     "roadNumbers": [
+      "I-70 W"
+     ],
+     "street": "Interstate Highway 70 W",
+     "stateCode": "CO",
+     "countryCode": "USA",
+     "instructionType": "TURN"
+    },
+    {
+     "routeOffsetInMeters": 1862618,
+     "travelTimeInSeconds": 59105,
+     "roadNumbers": [
+      "US-85 S",
+      "US-6 W"
+     ],
+     "street": "United States Highway 85 S",
+     "stateCode": "CO",
+     "countryCode": "USA",
+     "instructionType": "TURN"
+    },
+    {
+     "routeOffsetInMeters": 1863401,
+     "travelTimeInSeconds": 59135,
+     "roadNumbers": [
+      "I-25 S",
+      "US-87 S",
+      "US-85 S",
+      "US-6 W"
+     ],
+     "street": "I-25",
+     "stateCode": "CO",
+     "countryCode": "USA",
+     "instructionType": "TURN"
+    },
+    {
+     "routeOffsetInMeters": 1863687,
+     "travelTimeInSeconds": 59148,
+     "roadNumbers": [
+      "US-85 S",
+      "US-6 W"
+     ],
+     "street": "United States Highway 85 S",
+     "stateCode": "CO",
+     "countryCode": "USA",
+     "instructionType": "TURN"
+    },
+    {
+     "routeOffsetInMeters": 1864954,
+     "travelTimeInSeconds": 59204,
+     "roadNumbers": [
+      "I-25 S",
+      "US-87 S",
+      "US-85 S",
+      "US-6 W"
+     ],
+     "street": "I-25",
+     "stateCode": "CO",
+     "countryCode": "USA",
+     "instructionType": "ROAD_CHANGE"
+    },
+    {
+     "routeOffsetInMeters": 1868988,
+     "travelTimeInSeconds": 59354,
+     "roadNumbers": [
+      "I-70 Bus W",
+      "US-287 N",
+      "US-40 W"
+     ],
+     "street": "W Colfax Ave",
+     "stateCode": "CO",
+     "countryCode": "USA",
+     "instructionType": "TURN"
+    },
+    {
+     "routeOffsetInMeters": 1869375,
+     "travelTimeInSeconds": 59389,
+     "roadNumbers": [
+      "I-70 Bus E",
+      "US-287 S",
+      "US-40 E"
+     ],
+     "street": "W Colfax Ave",
+     "stateCode": "CO",
+     "countryCode": "USA",
+     "instructionType": "TURN"
+    },
+    {
+     "routeOffsetInMeters": 1871538,
+     "travelTimeInSeconds": 59642,
+     "street": "N Bannock St",
+     "stateCode": "CO",
+     "countryCode": "USA",
+     "instructionType": "LOCATION_ARRIVAL"
+    },
+    {
+     "routeOffsetInMeters": 1871629,
+     "travelTimeInSeconds": 59669,
+     "street": "N Bannock St",
+     "stateCode": "CO",
+     "countryCode": "USA",
+     "instructionType": "LOCATION_ARRIVAL"
+    }
+   ]
+  },
+  {
+   "lengthInMeters": 2172533,
+   "instructions": [
+    {
+     "routeOffsetInMeters": 0,
+     "travelTimeInSeconds": 0,
+     "street": "S Federal St",
+     "stateCode": "IL",
+     "countryCode": "USA",
+     "instructionType": "LOCATION_DEPARTURE"
+    },
+    {
+     "routeOffsetInMeters": 136,
+     "travelTimeInSeconds": 45,
+     "street": "W Van Buren St",
+     "stateCode": "IL",
+     "countryCode": "USA",
+     "instructionType": "TURN"
+    },
+    {
+     "routeOffsetInMeters": 219,
+     "travelTimeInSeconds": 84,
+     "street": "S Clark St",
+     "stateCode": "IL",
+     "countryCode": "USA",
+     "instructionType": "TURN"
+    },
+    {
+     "routeOffsetInMeters": 349,
+     "travelTimeInSeconds": 142,
+     "street": "W Ida B. Wells Dr",
+     "stateCode": "IL",
+     "countryCode": "USA",
+     "instructionType": "TURN"
+    },
+    {
+     "routeOffsetInMeters": 1166,
+     "travelTimeInSeconds": 236,
+     "roadNumbers": [
+      "I-290 W"
+     ],
+     "street": "Interstate Highway 290 W",
+     "stateCode": "IL",
+     "countryCode": "USA",
+     "instructionType": "TURN"
+    },
+    {
+     "routeOffsetInMeters": 1308,
+     "travelTimeInSeconds": 246,
+     "roadNumbers": [
+      "I-290 W"
+     ],
+     "street": "Interstate Highway 290 W",
+     "stateCode": "IL",
+     "countryCode": "USA",
+     "instructionType": "TURN"
+    },
+    {
+     "routeOffsetInMeters": 1618,
+     "travelTimeInSeconds": 266,
+     "roadNumbers": [
+      "I-290 W"
+     ],
+     "street": "Interstate Highway 290 W",
+     "stateCode": "IL",
+     "countryCode": "USA",
+     "instructionType": "DIRECTION_INFO"
+    },
+    {
+     "routeOffsetInMeters": 23287,
+     "travelTimeInSeconds": 2548,
+     "roadNumbers": [
+      "I-88 W"
+     ],
+     "street": "Interstate Highway 88 W",
+     "stateCode": "IL",
+     "countryCode": "USA",
+     "instructionType": "TURN"
+    },
+    {
+     "routeOffsetInMeters": 26324,
+     "travelTimeInSeconds": 2669,
+     "roadNumbers": [
+      "I-88 W"
+     ],
+     "street": "Interstate Highway 88 W",
+     "stateCode": "IL",
+     "countryCode": "USA",
+     "instructionType": "TURN"
+    },
+    {
+     "routeOffsetInMeters": 28134,
+     "travelTimeInSeconds": 2731,
+     "roadNumbers": [
+      "I-88 W"
+     ],
+     "street": "Interstate Highway 88 W",
+     "stateCode": "IL",
+     "countryCode": "USA",
+     "instructionType": "DIRECTION_INFO"
+    },
+    {
+     "routeOffsetInMeters": 59741,
+     "travelTimeInSeconds": 3805,
+     "roadNumbers": [
+      "I-88 W"
+     ],
+     "street": "Interstate Highway 88 W",
+     "stateCode": "IL",
+     "countryCode": "USA",
+     "instructionType": "TURN"
+    },
+    {
+     "routeOffsetInMeters": 60783,
+     "travelTimeInSeconds": 3841,
+     "roadNumbers": [
+      "I-88 W"
+     ],
+     "street": "Interstate Highway 88 W",
+     "stateCode": "IL",
+     "countryCode": "USA",
+     "instructionType": "DIRECTION_INFO"
+    },
+    {
+     "routeOffsetInMeters": 110739,
+     "travelTimeInSeconds": 5435,
+     "roadNumbers": [
+      "I-88 W"
+     ],
+     "street": "Interstate Highway 88 W",
+     "stateCode": "IL",
+     "countryCode": "USA",
+     "instructionType": "TURN"
+    },
+    {
+     "routeOffsetInMeters": 111789,
+     "travelTimeInSeconds": 5466,
+     "roadNumbers": [
+      "I-88 W"
+     ],
+     "street": "Interstate Highway 88 W",
+     "stateCode": "IL",
+     "countryCode": "USA",
+     "instructionType": "DIRECTION_INFO"
+    },
+    {
+     "routeOffsetInMeters": 122679,
+     "travelTimeInSeconds": 5794,
+     "roadNumbers": [
+      "I-39 N",
+      "US-51 N"
+     ],
+     "street": "Interstate Highway 39 N",
+     "stateCode": "IL",
+     "countryCode": "USA",
+     "instructionType": "TURN"
+    },
+    {
+     "routeOffsetInMeters": 123881,
+     "travelTimeInSeconds": 5838,
+     "roadNumbers": [
+      "I-39 N",
+      "US-51 N"
+     ],
+     "street": "Interstate Highway 39 N",
+     "stateCode": "IL",
+     "countryCode": "USA",
+     "instructionType": "ROAD_CHANGE"
+    },
+    {
+     "routeOffsetInMeters": 157074,
+     "travelTimeInSeconds": 6854,
+     "roadNumbers": [
+      "I-39 N",
+      "US-20 E",
+      "US-51 N"
+     ],
+     "street": "United States Highway 20 E",
+     "stateCode": "IL",
+     "countryCode": "USA",
+     "instructionType": "TURN"
+    },
+    {
+     "routeOffsetInMeters": 158964,
+     "travelTimeInSeconds": 6916,
+     "roadNumbers": [
+      "I-39 N",
+      "US-20 E",
+      "US-51 N"
+     ],
+     "street": "United States Highway 20 E",
+     "stateCode": "IL",
+     "countryCode": "USA",
+     "instructionType": "ROAD_CHANGE"
+    },
+    {
+     "routeOffsetInMeters": 163575,
+     "travelTimeInSeconds": 7067,
+     "roadNumbers": [
+      "I-39 N",
+      "I-90 W",
+      "US-51 N"
+     ],
+     "street": "Interstate Highway 39 N",
+     "stateCode": "IL",
+     "countryCode": "USA",
+     "instructionType": "TURN"
+    },
+    {
+     "routeOffsetInMeters": 165177,
+     "travelTimeInSeconds": 7119,
+     "roadNumbers": [
+      "I-39 N",
+      "I-90 W",
+      "US-51 N"
+     ],
+     "street": "Interstate Highway 39 N",
+     "stateCode": "IL",
+     "countryCode": "USA",
+     "instructionType": "ROAD_CHANGE"
+    },
+    {
+     "routeOffsetInMeters": 165277,
+     "travelTimeInSeconds": 7122,
+     "roadNumbers": [
+      "I-39 N",
+      "I-90 W",
+      "US-51 N"
+     ],
+     "street": "Interstate Highway 39 N",
+     "stateCode": "IL",
+     "countryCode": "USA",
+     "instructionType": "DIRECTION_INFO"
+    },
+    {
+     "routeOffsetInMeters": 185959,
+     "travelTimeInSeconds": 7749,
+     "roadNumbers": [
+      "I-39 N",
+      "I-90 W",
+      "US-51 N"
+     ],
+     "street": "Interstate Highway 39 N",
+     "stateCode": "IL",
+     "countryCode": "USA",
+     "instructionType": "TURN"
+    },
+    {
+     "routeOffsetInMeters": 186956,
+     "travelTimeInSeconds": 7780,
+     "roadNumbers": [
+      "I-39 N",
+      "I-90 W",
+      "US-51 N"
+     ],
+     "street": "Interstate Highway 39 N",
+     "stateCode": "IL",
+     "countryCode": "USA",
+     "instructionType": "DIRECTION_INFO"
+    },
+    {
+     "routeOffsetInMeters": 420480,
+     "travelTimeInSeconds": 14870,
+     "roadNumbers": [
+      "I-90 W"
+     ],
+     "street": "Interstate Highway 90 W",
+     "stateCode": "WI",
+     "countryCode": "USA",
+     "instructionType": "TURN"
+    },
+    {
+     "routeOffsetInMeters": 421060,
+     "travelTimeInSeconds": 14888,
+     "roadNumbers": [
+      "I-90 W"
+     ],
+     "street": "Interstate Highway 90 W",
+     "stateCode": "WI",
+     "countryCode": "USA",
+     "instructionType": "DIRECTION_INFO"
+    },
+    {
+     "routeOffsetInMeters": 502063,
+     "travelTimeInSeconds": 17353,
+     "roadNumbers": [
+      "I-90 W"
+     ],
+     "street": "Interstate Highway 90 W",
+     "stateCode": "MN",
+     "countryCode": "USA",
+     "instructionType": "TURN"
+    },
+    {
+     "routeOffsetInMeters": 502613,
+     "travelTimeInSeconds": 17372,
+     "roadNumbers": [
+      "I-90 W"
+     ],
+     "street": "Interstate Highway 90 W",
+     "stateCode": "MN",
+     "countryCode": "USA",
+     "instructionType": "DIRECTION_INFO"
+    },
+    {
+     "routeOffsetInMeters": 1501480,
+     "travelTimeInSeconds": 46988,
+     "roadNumbers": [
+      "SD-79"
+     ],
+     "street": "South Dakota State Highway 79",
+     "stateCode": "SD",
+     "countryCode": "USA",
+     "instructionType": "TURN"
+    },
+    {
+     "routeOffsetInMeters": 1501790,
+     "travelTimeInSeconds": 47004,
+     "street": "N Elk Vale Rd",
+     "stateCode": "SD",
+     "countryCode": "USA",
+     "instructionType": "TURN"
+    },
+    {
+     "routeOffsetInMeters": 1501946,
+     "travelTimeInSeconds": 47036,
+     "street": "N Elk Vale Rd",
+     "stateCode": "SD",
+     "countryCode": "USA",
+     "instructionType": "TURN"
+    },
+    {
+     "routeOffsetInMeters": 1502209,
+     "travelTimeInSeconds": 47063,
+     "roadNumbers": [
+      "US-16B W",
+      "US-16 W",
+      "SD-79"
+     ],
+     "street": "N Elk Vale Rd",
+     "stateCode": "SD",
+     "countryCode": "USA",
+     "instructionType": "DIRECTION_INFO"
+    },
+    {
+     "routeOffsetInMeters": 1510519,
+     "travelTimeInSeconds": 47478,
+     "roadNumbers": [
+      "SD-79"
+     ],
+     "street": "South Dakota State Highway 79",
+     "stateCode": "SD",
+     "countryCode": "USA",
+     "instructionType": "TURN"
+    },
+    {
+     "routeOffsetInMeters": 1510683,
+     "travelTimeInSeconds": 47528,
+     "roadNumbers": [
+      "SD-79"
+     ],
+     "street": "S Highway 79",
+     "stateCode": "SD",
+     "countryCode": "USA",
+     "instructionType": "TURN"
+    },
+    {
+     "routeOffsetInMeters": 1511121,
+     "travelTimeInSeconds": 47558,
+     "roadNumbers": [
+      "SD-79"
+     ],
+     "street": "S Highway 79",
+     "stateCode": "SD",
+     "countryCode": "USA",
+     "instructionType": "DIRECTION_INFO"
+    },
+    {
+     "routeOffsetInMeters": 1662705,
+     "travelTimeInSeconds": 52916,
+     "roadNumbers": [
+      "US-385 S"
+     ],
+     "street": "Highway 385",
+     "stateCode": "NE",
+     "countryCode": "USA",
+     "instructionType": "TURN"
+    },
+    {
+     "routeOffsetInMeters": 1663380,
+     "travelTimeInSeconds": 52966,
+     "roadNumbers": [
+      "US-385 S",
+      "US-20 E"
+     ],
+     "street": "Highway 20",
+     "stateCode": "NE",
+     "countryCode": "USA",
+     "instructionType": "TURN"
+    },
+    {
+     "routeOffsetInMeters": 1667046,
+     "travelTimeInSeconds": 53151,
+     "roadNumbers": [
+      "US-385 S"
+     ],
+     "street": "S Highway 385",
+     "stateCode": "NE",
+     "countryCode": "USA",
+     "instructionType": "TURN"
+    },
+    {
+     "routeOffsetInMeters": 1667281,
+     "travelTimeInSeconds": 53179,
+     "roadNumbers": [
+      "US-385 S"
+     ],
+     "street": "S Highway 385",
+     "stateCode": "NE",
+     "countryCode": "USA",
+     "instructionType": "DIRECTION_INFO"
+    },
+    {
+     "routeOffsetInMeters": 1790526,
+     "travelTimeInSeconds": 57669,
+     "roadNumbers": [
+      "NE-62A"
+     ],
+     "street": "State Highway 62A Link",
+     "stateCode": "NE",
+     "countryCode": "USA",
+     "instructionType": "TURN"
+    },
+    {
+     "routeOffsetInMeters": 1790851,
+     "travelTimeInSeconds": 57687,
+     "roadNumbers": [
+      "NE-62A"
+     ],
+     "street": "State Highway 62A Link",
+     "stateCode": "NE",
+     "countryCode": "USA",
+     "instructionType": "DIRECTION_INFO"
+    },
+    {
+     "routeOffsetInMeters": 1831305,
+     "travelTimeInSeconds": 59162,
+     "roadNumbers": [
+      "NE-92",
+      "NE-71"
+     ],
+     "street": "21st Ave",
+     "stateCode": "NE",
+     "countryCode": "USA",
+     "instructionType": "TURN"
+    },
+    {
+     "routeOffsetInMeters": 1835602,
+     "travelTimeInSeconds": 59330,
+     "roadNumbers": [
+      "NE-71"
+     ],
+     "street": "Scottsbluff-Gering Byp",
+     "stateCode": "NE",
+     "countryCode": "USA",
+     "instructionType": "TURN"
+    },
+    {
+     "routeOffsetInMeters": 1836107,
+     "travelTimeInSeconds": 59348,
+     "roadNumbers": [
+      "NE-71"
+     ],
+     "street": "Scottsbluff-Gering Byp",
+     "stateCode": "NE",
+     "countryCode": "USA",
+     "instructionType": "DIRECTION_INFO"
+    },
+    {
+     "routeOffsetInMeters": 1907029,
+     "travelTimeInSeconds": 61889,
+     "roadNumbers": [
+      "I-80 W"
+     ],
+     "street": "Interstate Highway 80 W",
+     "stateCode": "NE",
+     "countryCode": "USA",
+     "instructionType": "TURN"
+    },
+    {
+     "routeOffsetInMeters": 1907589,
+     "travelTimeInSeconds": 61931,
+     "roadNumbers": [
+      "I-80 W"
+     ],
+     "street": "Interstate Highway 80 W",
+     "stateCode": "NE",
+     "countryCode": "USA",
+     "instructionType": "ROAD_CHANGE"
+    },
+    {
+     "routeOffsetInMeters": 1907689,
+     "travelTimeInSeconds": 61935,
+     "roadNumbers": [
+      "I-80 W"
+     ],
+     "street": "Interstate Highway 80 W",
+     "stateCode": "NE",
+     "countryCode": "USA",
+     "instructionType": "DIRECTION_INFO"
+    },
+    {
+     "routeOffsetInMeters": 2013078,
+     "travelTimeInSeconds": 65216,
+     "roadNumbers": [
+      "I-25 S",
+      "US-87 S"
+     ],
+     "street": "United States Highway 87 S",
+     "stateCode": "WY",
+     "countryCode": "USA",
+     "instructionType": "TURN"
+    },
+    {
+     "routeOffsetInMeters": 2013561,
+     "travelTimeInSeconds": 65245,
+     "roadNumbers": [
+      "I-25 S",
+      "US-87 S"
+     ],
+     "street": "United States Highway 87 S",
+     "stateCode": "WY",
+     "countryCode": "USA",
+     "instructionType": "ROAD_CHANGE"
+    },
+    {
+     "routeOffsetInMeters": 2076662,
+     "travelTimeInSeconds": 67067,
+     "roadNumbers": [
+      "I-25 S"
+     ],
+     "street": "Interstate Highway 25 S",
+     "stateCode": "CO",
+     "countryCode": "USA",
+     "instructionType": "TURN"
+    },
+    {
+     "routeOffsetInMeters": 2080542,
+     "travelTimeInSeconds": 67175,
+     "roadNumbers": [
+      "I-25 S"
+     ],
+     "street": "Interstate Highway 25 S",
+     "stateCode": "CO",
+     "countryCode": "USA",
+     "instructionType": "TURN"
+    },
+    {
+     "routeOffsetInMeters": 2084741,
+     "travelTimeInSeconds": 67293,
+     "roadNumbers": [
+      "I-25 S"
+     ],
+     "street": "Interstate Highway 25 S",
+     "stateCode": "CO",
+     "countryCode": "USA",
+     "instructionType": "TURN"
+    },
+    {
+     "routeOffsetInMeters": 2085396,
+     "travelTimeInSeconds": 67311,
+     "roadNumbers": [
+      "I-25 S"
+     ],
+     "street": "Interstate Highway 25 S",
+     "stateCode": "CO",
+     "countryCode": "USA",
+     "instructionType": "DIRECTION_INFO"
+    },
+    {
+     "routeOffsetInMeters": 2093048,
+     "travelTimeInSeconds": 67523,
+     "roadNumbers": [
+      "I-25 S",
+      "US-87 S"
+     ],
+     "street": "United States Highway 87 S",
+     "stateCode": "CO",
+     "countryCode": "USA",
+     "instructionType": "TURN"
+    },
+    {
+     "routeOffsetInMeters": 2093447,
+     "travelTimeInSeconds": 67535,
+     "roadNumbers": [
+      "I-25 S",
+      "US-87 S"
+     ],
+     "street": "United States Highway 87 S",
+     "stateCode": "CO",
+     "countryCode": "USA",
+     "instructionType": "TURN"
+    },
+    {
+     "routeOffsetInMeters": 2096582,
+     "travelTimeInSeconds": 67627,
+     "roadNumbers": [
+      "I-25 S"
+     ],
+     "street": "Interstate Highway 25 S",
+     "stateCode": "CO",
+     "countryCode": "USA",
+     "instructionType": "TURN"
+    },
+    {
+     "routeOffsetInMeters": 2097222,
+     "travelTimeInSeconds": 67645,
+     "roadNumbers": [
+      "I-25 S"
+     ],
+     "street": "Interstate Highway 25 S",
+     "stateCode": "CO",
+     "countryCode": "USA",
+     "instructionType": "DIRECTION_INFO"
+    },
+    {
+     "routeOffsetInMeters": 2101773,
+     "travelTimeInSeconds": 67773,
+     "roadNumbers": [
+      "I-25 S"
+     ],
+     "street": "Interstate Highway 25 S",
+     "stateCode": "CO",
+     "countryCode": "USA",
+     "instructionType": "TURN"
+    },
+    {
+     "routeOffsetInMeters": 2104849,
+     "travelTimeInSeconds": 67861,
+     "roadNumbers": [
+      "I-25 S",
+      "US-87 S"
+     ],
+     "street": "United States Highway 87 S",
+     "stateCode": "CO",
+     "countryCode": "USA",
+     "instructionType": "TURN"
+    },
+    {
+     "routeOffsetInMeters": 2105429,
+     "travelTimeInSeconds": 67880,
+     "roadNumbers": [
+      "I-25 S",
+      "US-87 S"
+     ],
+     "street": "United States Highway 87 S",
+     "stateCode": "CO",
+     "countryCode": "USA",
+     "instructionType": "DIRECTION_INFO"
+    },
+    {
+     "routeOffsetInMeters": 2169892,
+     "travelTimeInSeconds": 69969,
+     "roadNumbers": [
+      "I-70 Bus W",
+      "US-287 N",
+      "US-40 W"
+     ],
+     "street": "W Colfax Ave",
+     "stateCode": "CO",
+     "countryCode": "USA",
+     "instructionType": "TURN"
+    },
+    {
+     "routeOffsetInMeters": 2170279,
+     "travelTimeInSeconds": 70005,
+     "roadNumbers": [
+      "I-70 Bus E",
+      "US-287 S",
+      "US-40 E"
+     ],
+     "street": "W Colfax Ave",
+     "stateCode": "CO",
+     "countryCode": "USA",
+     "instructionType": "TURN"
+    },
+    {
+     "routeOffsetInMeters": 2172443,
+     "travelTimeInSeconds": 70258,
+     "street": "N Bannock St",
+     "stateCode": "CO",
+     "countryCode": "USA",
+     "instructionType": "LOCATION_ARRIVAL"
+    },
+    {
+     "routeOffsetInMeters": 2172533,
+     "travelTimeInSeconds": 70284,
+     "street": "N Bannock St",
+     "stateCode": "CO",
+     "countryCode": "USA",
+     "instructionType": "LOCATION_ARRIVAL"
+    }
+   ]
+  }
+ ]
+}

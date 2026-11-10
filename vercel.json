@@ -6,7 +6,7 @@
   "outputDirectory": "frontend/dist",
   "functions": {
     "api/index.py": {
-      "excludeFiles": "{frontend/**,backend/routing/tests/**,.github/**,scripts/**}"
+      "excludeFiles": "{frontend/**,backend/routing/tests/**,.github/**,scripts/**,docs/**}"
     }
   },
   "rewrites": [

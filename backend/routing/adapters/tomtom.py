@@ -8,6 +8,7 @@ from django.conf import settings
 from ..domain.alternatives import detour_points, same_corridor
 from ..domain.checkpoints import time_profile
 from ..domain.models import Route
+from ..domain.places import primary_road
 from ..domain.units import lb_to_kg, m_to_mi
 from ..errors import NoRoute, NotConfigured, UpstreamError
 from .http import get_json, make_client
@@ -52,7 +53,13 @@ def parse_route(data, id=""):
     # Each instruction carries its offset from the start and the travel time to reach it.
     steps = data.get("guidance", {}).get("instructions", [])
     pairs = [(m_to_mi(s["routeOffsetInMeters"]), s["travelTimeInSeconds"]) for s in steps]
-    return Route(id, pts, distance, duration, time_profile(pairs, distance, duration))
+    # roadNumbers names the road followed after each step; steps on unnumbered streets are None.
+    roads = [
+        (m, primary_road(s.get("roadNumbers"))) for (m, _), s in zip(pairs, steps, strict=True)
+    ]
+    states = [s["stateCode"] for s in steps if s.get("stateCode")]
+    profile = time_profile(pairs, distance, duration)
+    return Route(id, pts, distance, duration, profile, roads, states)
 
 
 def _calculate(client, stops, depart, load_lb, alternatives):

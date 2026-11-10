@@ -25,6 +25,7 @@ export interface Checkpoint {
   lon: number
   eta: string
   covered_mi: number
+  road: string | null // highway at this mile, from TomTom's guidance
   weather: Weather
   level: Level
   reason: string
@@ -43,6 +44,8 @@ export interface RoutePlan {
   duration_s: number
   departure: string
   arrival: string
+  via: string[] // main highways, in driving order
+  states: string[] // states crossed, in driving order (TomTom's state codes)
   geometry: LonLat[]
   segments: Segment[]
   checkpoints: Checkpoint[]

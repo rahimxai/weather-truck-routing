@@ -549,6 +549,52 @@ input {
   font-weight: 700;
 }
 
+/* Main highways and states crossed, from TomTom's guidance. */
+.route-via {
+  display: grid;
+  gap: 3px;
+}
+
+.route-via p {
+  margin: 0;
+}
+
+.via-roads {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 4px 6px;
+  font-size: 0.82rem;
+}
+
+.via-label {
+  font-weight: 600;
+  color: var(--muted);
+}
+
+.via-road {
+  padding: 1px 6px;
+  font-weight: 700;
+  background: var(--panel);
+  border: 1px solid var(--rule-strong);
+  border-radius: 3px;
+}
+
+.via-step {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.via-arrow {
+  color: var(--muted);
+}
+
+.via-states {
+  font-size: 0.82rem;
+  color: var(--muted);
+}
+
 .reason {
   margin: 0;
   padding: 8px 10px;
@@ -754,6 +800,7 @@ input {
   top: 12px;
   left: 12px;
   right: 56px; /* clear of the zoom buttons */
+  bottom: 150px; /* above the time bar, so the key can use the height between */
   z-index: 2;
   display: flex;
   flex-direction: column;
@@ -775,6 +822,156 @@ input {
   border-radius: var(--radius-sm);
 }
 
+.legend,
+.map-key {
+  pointer-events: auto;
+}
+
+.map-notes > :not(.map-key) {
+  flex-shrink: 0;
+}
+
+.legend-help {
+  padding: 0;
+  border: 0;
+  background: none;
+  color: var(--blue);
+  font: inherit;
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  cursor: pointer;
+}
+
+.legend-help:hover {
+  text-decoration-thickness: 2px;
+}
+
+.legend-help:focus-visible,
+.map-key:focus-visible,
+.map-key-close:focus-visible {
+  outline: 2px solid var(--blue);
+  outline-offset: 2px;
+}
+
+/* The key opened from the legend: thresholds, load rules and what each layer means. */
+.map-key {
+  display: flex;
+  flex-direction: column;
+  width: min(380px, 100%);
+  min-height: 0; /* shrink inside .map-notes; the body scrolls when the map is short */
+  overflow: hidden;
+  font-size: 0.82rem;
+  background: var(--panel);
+  border: 1px solid var(--rule-strong);
+  border-radius: var(--radius);
+  box-shadow: 0 6px 20px rgb(27 36 48 / 0.14);
+}
+
+.map-key-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  padding: 10px 14px 0;
+}
+
+.map-key-body {
+  min-height: 0;
+  overflow-y: auto;
+  padding: 0 14px 12px;
+}
+
+.map-key-body:focus-visible {
+  outline: 2px solid var(--blue);
+  outline-offset: -2px;
+}
+
+.map-key h2 {
+  margin: 0;
+  font-size: 0.95rem;
+}
+
+.map-key h3 {
+  margin: 12px 0 3px;
+  font-size: 0.82rem;
+}
+
+.map-key p,
+.map-key ul {
+  margin: 0 0 4px;
+}
+
+.map-key ul {
+  padding-left: 16px;
+}
+
+.map-key li + li {
+  margin-top: 2px;
+}
+
+.map-key table {
+  width: 100%;
+  margin: 6px 0 4px;
+  border-collapse: collapse;
+}
+
+.map-key th,
+.map-key td {
+  padding: 3px 8px 3px 0;
+  text-align: left;
+  white-space: nowrap;
+  border-bottom: 1px solid var(--rule);
+}
+
+.map-key td {
+  font-weight: 500;
+}
+
+.map-key thead th {
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--muted);
+}
+
+.map-key tbody th i {
+  display: inline-block;
+  width: 9px;
+  height: 9px;
+  margin-right: 6px;
+  border-radius: 2px;
+}
+
+.map-key-note {
+  color: var(--muted);
+}
+
+.map-key-close {
+  display: grid;
+  place-items: center;
+  width: 28px;
+  height: 28px;
+  margin-right: -6px;
+  padding: 0;
+  border: 0;
+  border-radius: var(--radius-sm);
+  background: none;
+  cursor: pointer;
+}
+
+.map-key-close:hover {
+  background: var(--wash);
+}
+
+.map-key-close svg {
+  width: 12px;
+  height: 12px;
+  fill: none;
+  stroke: var(--ink);
+  stroke-width: 1.8;
+  stroke-linecap: round;
+}
+
 .cp {
   font-family: 'Overpass Variable', system-ui, sans-serif;
   font-size: 0.88rem;
@@ -792,6 +989,10 @@ input {
 
 .cp p {
   margin: 2px 0;
+}
+
+.cp-place {
+  font-weight: 700;
 }
 
 .cp-eta {
@@ -1015,6 +1216,24 @@ input {
   .when {
     min-width: 0;
   }
+
+  /* The open key may cover the zoom buttons; it needs the width for its table. */
+  .map-notes:has(.map-key) {
+    right: 12px;
+  }
+
+  .map-notes:has(.map-key) .legend {
+    max-width: calc(100% - 44px); /* still clear of the zoom buttons */
+  }
+
+  .map-key {
+    width: 100%;
+  }
+
+  .map-key th,
+  .map-key td {
+    padding-right: 6px;
+  }
 }
 
 /* Motion. One page-load moment, then motion only in answer to what the user does.
@@ -1099,6 +1318,11 @@ input {
     animation: pop-in 180ms cubic-bezier(0.2, 0.8, 0.3, 1.2) backwards;
     transform-origin: 50% 100%;
   }
+
+  .map-key {
+    animation: pop-in 180ms cubic-bezier(0.2, 0.8, 0.3, 1.2) backwards;
+    transform-origin: 0 0;
+  }
 }
 
 @keyframes settle {
@@ -1147,5 +1371,17 @@ input {
   from {
     opacity: 0;
     scale: 0.94;
+  }
+}
+
+/* The smallest phones: keep all four weather buttons inside the time bar. */
+@media (max-width: 360px) {
+  .layer-controls {
+    flex-wrap: wrap;
+    gap: 6px 8px;
+  }
+
+  .segmented.small label {
+    padding: 0 7px;
   }
 }

@@ -1,9 +1,11 @@
 import logging
 import time
+from dataclasses import replace
 
 from ..adapters import open_meteo, tomtom
 from ..domain.checkpoints import build_checkpoints
 from ..domain.forecast import weather_at
+from ..domain.places import locate, states_crossed, via_roads
 from ..domain.recommend import recommend, score
 from ..domain.risk import assess
 from ..domain.scenarios import scenario_weather
@@ -38,7 +40,7 @@ def plan_trip(origin, dest, departure, load_lb, interval_mi, scenario=None):
     """Routes, checkpoint weather and risk, ranked. Returns (Recommendation, warnings)."""
     started = time.perf_counter()
     routes = tomtom.truck_routes(origin, dest, departure, load_lb)
-    groups = [build_checkpoints(r, interval_mi, departure) for r in routes]
+    groups = [locate(r, build_checkpoints(r, interval_mi, departure)) for r in routes]
     flat = [cp for g in groups for cp in g]
 
     lookup = demo_weather(scenario, routes, departure) if scenario else live_weather(flat)
@@ -49,7 +51,14 @@ def plan_trip(origin, dest, departure, load_lb, interval_mi, scenario=None):
             wx = [lookup(cp) for cp in cps]
         except ValueError:
             raise ForecastUnavailable() from None
-        scored.append(score(route, assess(cps, wx, load_lb)))
+        sr = score(route, assess(cps, wx, load_lb))
+        scored.append(
+            replace(
+                sr,
+                via=via_roads(route.roads, route.distance_mi),
+                states=states_crossed(route.state_codes),
+            )
+        )
 
     rec = recommend(scored)
     warnings = list(rec.warnings)

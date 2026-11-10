@@ -8,16 +8,8 @@ def lb_to_kg(lb):
     return lb * KG_PER_LB
 
 
-def kg_to_lb(kg):
-    return kg / KG_PER_LB
-
-
 def m_to_mi(m):
     return m / M_PER_MI
-
-
-def mi_to_m(mi):
-    return mi * M_PER_MI
 
 
 def kmh_to_mph(kmh):

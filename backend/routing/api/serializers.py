@@ -98,6 +98,7 @@ def checkpoint_payload(cp):
         "lon": round(cp.lon, 5),
         "eta": iso(cp.eta),
         "covered_mi": round(cp.covered_mi, 2),
+        "road": cp.road,
         "weather": {
             "wind_mph": round(wx.wind_mph, 1),
             "gust_mph": round(wx.gust_mph, 1),
@@ -119,6 +120,8 @@ def route_payload(sr, rank):
         "duration_s": round(route.duration_s),
         "departure": iso(cps[0].eta),
         "arrival": iso(cps[-1].eta),
+        "via": sr.via,
+        "states": sr.states,
         "geometry": path(route.geometry, LINE_TOL),
         "segments": [
             {"level": level.name, "path": path(pts, SEGMENT_TOL)}

@@ -42,6 +42,9 @@ class Route:
     duration_s: float
     # (mile, seconds after departure) pairs from the router, used for ETAs.
     profile: list[tuple[float, float]]
+    # From the router's guidance steps: (start mile, road number or None), and each step's state.
+    roads: list[tuple[float, str | None]] = field(default_factory=list)
+    state_codes: list[str] = field(default_factory=list)
 
 
 @dataclass(frozen=True)
@@ -53,6 +56,7 @@ class Checkpoint:
     covered_mi: float
     weather: Weather | None = None
     risk: Risk | None = None
+    road: str | None = None
 
 
 @dataclass(frozen=True)
@@ -66,6 +70,8 @@ class ScoredRoute:
     route: Route
     checkpoints: list[Checkpoint]
     summary: RouteSummary
+    via: list[str] = field(default_factory=list)
+    states: list[str] = field(default_factory=list)
 
 
 @dataclass(frozen=True)

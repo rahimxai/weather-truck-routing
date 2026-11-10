@@ -17,6 +17,8 @@ function route(over: Partial<RoutePlan> = {}): RoutePlan {
     duration_s: 7200,
     departure: '2026-11-12T14:00:00Z',
     arrival: '2026-11-12T16:00:00Z',
+    via: [],
+    states: [],
     geometry: [],
     segments: [],
     checkpoints: [cp('LOW', 25), cp('SEVERE', 25), cp('LOW', 50)],
@@ -29,6 +31,20 @@ function route(over: Partial<RoutePlan> = {}): RoutePlan {
 }
 
 describe('RouteCard', () => {
+  it('names the highways and states', () => {
+    const r = route({ via: ['I-88', 'I-80', 'I-76'], states: ['Illinois', 'Iowa', 'Nebraska'] })
+    render(<RouteCard route={r} recommended focused onFocus={() => {}} />)
+    expect(screen.getByText('Via').parentElement?.textContent).toBe('ViaI-88→I-80→I-76')
+    expect(screen.getByText('Illinois, Iowa, Nebraska')).toBeTruthy()
+  })
+
+  it('leaves the via lines out when nothing is known', () => {
+    const { container } = render(
+      <RouteCard route={route()} recommended focused onFocus={() => {}} />,
+    )
+    expect(container.querySelector('.route-via')).toBeNull()
+  })
+
   it('shows the reason only on the recommended route', () => {
     const { rerender } = render(
       <RouteCard route={route()} recommended focused reason="Because." onFocus={() => {}} />,

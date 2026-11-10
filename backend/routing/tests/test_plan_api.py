@@ -80,6 +80,7 @@ def test_checkpoint_shape(client, three):
         "lon",
         "eta",
         "covered_mi",
+        "road",
         "weather",
         "level",
         "reason",
@@ -278,3 +279,32 @@ def test_geocode(client, apis):
     assert client.get("/api/geocode?q=denv").json() == [
         {"label": "Denver, CO", "lat": 39.74, "lon": -104.99}
     ]
+
+
+def test_routes_name_their_states(client, apis):
+    data = tt_route(DIRECT)
+    for i, step in enumerate(data["guidance"]["instructions"]):
+        step["stateCode"] = ["IL", "IA", "NE", "CO"][min(3, i // 3)]
+    apis.routes = [data, tt_route(NORTHERN), tt_route(SOUTHERN)]
+    direct = next(r for r in post(client, body()).json()["routes"] if r["id"] == "A")
+    assert direct["states"] == ["Illinois", "Iowa", "Nebraska", "Colorado"]
+
+
+def test_routes_name_their_highways(client, apis):
+    data = tt_route(DIRECT)
+    steps = data["guidance"]["instructions"]
+    # Like real TomTom guidance: every step on a numbered road carries its number.
+    for i, step in enumerate(steps):
+        step["roadNumbers"] = ["I-88 W"] if i < 2 else ["I-80 W"]
+    apis.routes = [data, tt_route(NORTHERN), tt_route(SOUTHERN)]
+    direct = next(r for r in post(client, body()).json()["routes"] if r["id"] == "A")
+    assert direct["via"] == ["I-88", "I-80"]
+    assert direct["checkpoints"][0]["road"] == "I-88"
+    assert direct["checkpoints"][-1]["road"] == "I-80"
+
+
+def test_missing_road_numbers_leave_via_empty(client, three):
+    route = post(client, body()).json()["routes"][0]
+    assert route["via"] == []
+    assert route["states"] == []
+    assert route["checkpoints"][0]["road"] is None

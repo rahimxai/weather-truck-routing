@@ -18,6 +18,7 @@ export default function CheckpointPopup({ cp }: { cp: Checkpoint }) {
         <strong>Mile {cp.mile.toLocaleString('en-US')}</strong>
         <Tag level={cp.level} />
       </div>
+      {cp.road && <p className="cp-place">On {cp.road}</p>}
       <p className="cp-eta">Truck arrives {localTime(cp.eta)}</p>
       <p className="cp-reason">{cp.reason}</p>
       <dl className="cp-wx">
