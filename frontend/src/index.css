@@ -1,0 +1,1151 @@
+:root {
+  --ink: #1b2430;
+  --muted: #5b6573;
+  --rule: #d9dee4;
+  --rule-strong: #c3cad3;
+  --wash: #f2f4f6;
+  --panel: #ffffff;
+  --blue: #1f4e9c;
+  --blue-wash: #e8eef8;
+  --danger: #b42520;
+  --danger-wash: #fbeceb;
+  --purple: #5b1a6e;
+  --purple-wash: #f3eaf6;
+
+  --radius-sm: 4px;
+  --radius: 8px;
+
+  font-family:
+    'Overpass Variable',
+    system-ui,
+    -apple-system,
+    'Segoe UI',
+    sans-serif;
+  font-size: 15px;
+  line-height: 1.45;
+  color: var(--ink);
+  background: var(--panel);
+  font-variant-numeric: tabular-nums;
+  -webkit-font-smoothing: antialiased;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+button,
+input {
+  font: inherit;
+  color: inherit;
+}
+
+:focus-visible {
+  outline: 3px solid var(--blue);
+  outline-offset: 2px;
+}
+
+/* Layout */
+
+.app {
+  display: grid;
+  grid-template-columns: minmax(340px, 400px) 1fr;
+  height: 100dvh;
+}
+
+.panel {
+  overflow-y: auto;
+  border-right: 1px solid var(--rule);
+  padding: 20px 20px 32px;
+}
+
+.map-area {
+  position: relative;
+  min-height: 0;
+}
+
+.brand {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding-bottom: 16px;
+  margin-bottom: 18px;
+}
+
+/* A lane line under the header: the one decorative road motif. */
+.brand::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 3px;
+  background: repeating-linear-gradient(90deg, var(--ink) 0 14px, transparent 14px 24px);
+  opacity: 0.16;
+}
+
+.brand-mark {
+  flex: none;
+  width: 38px;
+  height: 40px;
+}
+
+.brand-mark path:first-child {
+  fill: var(--blue);
+}
+
+.brand-mark .mark-lane {
+  fill: none;
+  stroke: #fff;
+  stroke-width: 2.4;
+  stroke-linecap: round;
+}
+
+.brand h1 {
+  font-size: 1.4rem;
+  font-weight: 800;
+  line-height: 1.12;
+  letter-spacing: -0.015em;
+  margin: 0;
+}
+
+.brand p {
+  margin: 3px 0 0;
+  color: var(--muted);
+}
+
+/* Form */
+
+.trip {
+  display: grid;
+  gap: 12px;
+}
+
+.field {
+  display: grid;
+  gap: 4px;
+  min-width: 0;
+}
+
+.field label,
+.field legend {
+  font-weight: 700;
+  font-size: 0.87rem;
+}
+
+.unit {
+  font-weight: 500;
+  color: var(--muted);
+}
+
+.field input[type='text'],
+.field input[type='number'],
+.field input[type='datetime-local'] {
+  width: 100%;
+  height: 42px;
+  padding: 0 11px;
+  border: 1px solid var(--rule-strong);
+  border-radius: 6px;
+  background: var(--panel);
+  transition:
+    border-color 150ms ease,
+    box-shadow 150ms ease;
+}
+
+.field input:hover {
+  border-color: #9aa3ad;
+}
+
+/* A soft ring instead of the outline on text fields; still clearly visible. */
+.field input:focus-visible {
+  outline: none;
+  border-color: var(--blue);
+  box-shadow: 0 0 0 3px rgb(31 78 156 / 0.2);
+}
+
+/* From and To share a rail whose dots match the map's start and end markers. */
+.places {
+  position: relative;
+  z-index: 2; /* suggestion lists must sit above the rows below, even mid-animation */
+  display: grid;
+  grid-template-columns: 12px minmax(0, 1fr) auto;
+  gap: 0 10px;
+}
+
+.rail {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 41px 0 18px;
+}
+
+.dot {
+  flex: none;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  border: 3px solid var(--ink);
+}
+
+.dot.start {
+  background: #fff;
+}
+
+.dot.end {
+  background: var(--ink);
+}
+
+.rail-line {
+  flex: 1;
+  margin: 3px 0;
+  border-left: 2px dotted #9aa3ad;
+}
+
+.place-fields {
+  display: grid;
+  gap: 12px;
+  min-width: 0;
+}
+
+.swap {
+  align-self: center;
+  display: grid;
+  place-items: center;
+  width: 34px;
+  height: 34px;
+  margin-top: 22px;
+  border: 1px solid var(--rule-strong);
+  border-radius: 50%;
+  background: var(--panel);
+  cursor: pointer;
+  transition: background-color 150ms ease;
+}
+
+.swap:hover {
+  background: var(--wash);
+}
+
+.swap svg {
+  width: 16px;
+  height: 16px;
+  fill: none;
+  stroke: var(--ink);
+  stroke-width: 1.6;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.row {
+  display: grid;
+  grid-template-columns: 1fr 8.5rem;
+  gap: 10px;
+}
+
+.place {
+  position: relative;
+}
+
+.options {
+  position: absolute;
+  z-index: 10;
+  top: 100%;
+  left: 0;
+  right: 0;
+  margin: 4px 0 0;
+  padding: 4px 0;
+  list-style: none;
+  background: var(--panel);
+  border: 1px solid var(--rule);
+  border-radius: var(--radius-sm);
+  box-shadow: 0 8px 24px rgb(27 36 48 / 0.14);
+}
+
+.options li {
+  padding: 8px 10px;
+  cursor: pointer;
+}
+
+.options li.active {
+  background: var(--blue-wash);
+}
+
+.hint {
+  margin: 0;
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+
+.interval {
+  border: 0;
+  padding: 0;
+  margin: 0;
+}
+
+.segmented {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  border: 1px solid #b9c1cb;
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+}
+
+.segmented label {
+  display: grid;
+  place-items: center;
+  height: 36px;
+  font-weight: 600;
+  cursor: pointer;
+  transition:
+    background-color 150ms ease,
+    color 150ms ease;
+}
+
+.segmented label + label {
+  border-left: 1px solid #b9c1cb;
+}
+
+.segmented label.on {
+  background: var(--ink);
+  color: #fff;
+}
+
+.segmented input {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.segmented label:has(input:focus-visible) {
+  outline: 3px solid var(--blue);
+  outline-offset: -3px;
+}
+
+.primary {
+  height: 46px;
+  border: 0;
+  border-radius: 6px;
+  background: var(--blue);
+  color: #fff;
+  font-weight: 700;
+  font-size: 1rem;
+  cursor: pointer;
+  transition:
+    background-color 150ms ease,
+    transform 100ms ease;
+}
+
+.primary:active:not(:disabled) {
+  transform: scale(0.985);
+}
+
+.primary:hover {
+  background: #183f80;
+}
+
+.primary:disabled {
+  background: #7d93b8;
+  cursor: progress;
+}
+
+.form-error {
+  margin: 0;
+  color: var(--danger);
+  font-weight: 600;
+}
+
+.demo-toggle {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.demo-toggle label {
+  cursor: pointer;
+}
+
+.demo-toggle input {
+  width: 16px;
+  height: 16px;
+  margin: 2px 0 0;
+  accent-color: var(--ink);
+}
+
+.demo-toggle small {
+  display: block;
+  font-weight: 400;
+  font-size: 0.8rem;
+  color: var(--muted);
+}
+
+/* Results */
+
+.results {
+  margin-top: 24px;
+  display: grid;
+  gap: 12px;
+}
+
+.loading-note {
+  margin: 0;
+  color: var(--muted);
+}
+
+.empty {
+  margin: 0;
+  color: var(--muted);
+  border-top: 1px solid var(--rule);
+  padding-top: 16px;
+}
+
+.status {
+  margin: 0;
+  padding: 10px 12px;
+  border-radius: var(--radius-sm);
+  font-weight: 600;
+}
+
+.status.info {
+  background: var(--wash);
+}
+
+.status.error {
+  background: var(--danger-wash);
+  color: var(--danger);
+}
+
+.status.danger {
+  background: var(--purple-wash);
+  color: var(--purple);
+  border-left: 4px solid var(--purple);
+}
+
+/* Demo weather is labelled in ink with hazard stripes, unlike any risk colour. */
+.scenario-banner {
+  padding: 10px 12px 10px 18px;
+  border-radius: var(--radius-sm);
+  background:
+    repeating-linear-gradient(-45deg, #f2c94c 0 6px, var(--ink) 6px 12px) left / 8px 100% no-repeat,
+    var(--ink);
+  color: #fff;
+}
+
+.scenario-banner strong {
+  display: block;
+}
+
+.scenario-banner p {
+  margin: 2px 0 0;
+  font-size: 0.88rem;
+  color: #d5dbe2;
+}
+
+.scenario-pill {
+  margin: 0;
+  padding: 5px 12px;
+  border-radius: 999px;
+  background: var(--ink);
+  color: #fff;
+  font-size: 0.82rem;
+  font-weight: 700;
+  white-space: nowrap;
+  box-shadow: 0 2px 8px rgb(27 36 48 / 0.25);
+}
+
+.map-failed {
+  display: grid;
+  place-items: center;
+  padding: 24px;
+  background: var(--wash);
+  color: var(--muted);
+  text-align: center;
+}
+
+.map-failed strong {
+  display: block;
+  color: var(--ink);
+}
+
+.routes {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  border-top: 1px solid var(--rule);
+}
+
+.route {
+  position: relative;
+  display: grid;
+  gap: 10px;
+  padding: 14px 12px 14px 14px;
+  border-bottom: 1px solid var(--rule);
+  border-left: 4px solid transparent;
+  transition:
+    background-color 200ms ease,
+    border-color 200ms ease;
+}
+
+.route.focused {
+  border-left-color: var(--ink);
+  background: var(--wash);
+}
+
+.route.recommended {
+  border-left-color: var(--blue);
+}
+
+.route.recommended.focused {
+  background: var(--blue-wash);
+}
+
+.route-head {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: 10px;
+  padding: 0;
+  border: 0;
+  background: none;
+  text-align: left;
+  cursor: pointer;
+}
+
+/* The header button stretches over the whole card, so any click focuses the route. */
+.route-head::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+}
+
+.route-name {
+  display: grid;
+  font-weight: 800;
+  font-size: 1.05rem;
+  line-height: 1.2;
+}
+
+.route-rank {
+  font-weight: 600;
+  font-size: 0.8rem;
+  color: var(--muted);
+}
+
+.recommended .route-rank {
+  color: var(--blue);
+}
+
+.route-stats {
+  display: grid;
+  justify-items: end;
+  line-height: 1.25;
+}
+
+.route-stats b {
+  font-weight: 700;
+}
+
+.reason {
+  margin: 0;
+  padding: 8px 10px;
+  font-size: 0.9rem;
+  background: var(--panel);
+  border: 1px solid #cdd8ee;
+  border-radius: 6px;
+}
+
+.route-rank.badge {
+  justify-self: start;
+  margin-top: 3px;
+  padding: 1px 8px;
+  border-radius: 999px;
+  background: var(--blue);
+  color: #fff;
+  font-size: 0.72rem;
+  line-height: 1.5;
+}
+
+.results-head h2 {
+  margin: 0;
+  font-size: 1.05rem;
+  font-weight: 800;
+}
+
+.results-head p {
+  margin: 2px 0 0;
+  font-size: 0.88rem;
+  color: var(--muted);
+}
+
+.shield {
+  width: 32px;
+  height: 34px;
+}
+
+.shield path {
+  fill: #5b6573;
+  transition: fill 200ms ease;
+}
+
+.shield.active path {
+  fill: var(--blue);
+}
+
+.shield text {
+  fill: #fff;
+  font-weight: 800;
+  font-size: 15px;
+}
+
+.strip-bar {
+  position: relative;
+  height: 12px;
+  border-radius: 2px;
+  overflow: hidden;
+  background: var(--rule);
+}
+
+.strip-bar span {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+}
+
+.strip-scale {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 3px;
+  font-size: 0.75rem;
+  color: var(--muted);
+}
+
+.route-foot {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 6px 12px;
+  font-size: 0.85rem;
+}
+
+.totals {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 12px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.totals li,
+.legend span {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.totals i,
+.legend i {
+  width: 10px;
+  height: 10px;
+  border-radius: 2px;
+}
+
+.arrival {
+  color: var(--muted);
+}
+
+/* Loading: a truck rolling down a lane */
+
+.plan-loading {
+  display: grid;
+  gap: 8px;
+}
+
+.lane {
+  position: relative;
+  height: 30px;
+  overflow: hidden;
+  border-radius: 6px;
+  background: #2a3442;
+}
+
+.lane::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50%;
+  height: 2px;
+  margin-top: -1px;
+  background: repeating-linear-gradient(
+    90deg,
+    rgb(255 255 255 / 0.7) 0 16px,
+    transparent 16px 30px
+  );
+}
+
+.lane-truck {
+  position: absolute;
+  top: 4px;
+  left: 14px;
+  width: 40px;
+  height: 20px;
+  fill: #fff;
+}
+
+.lane-truck circle {
+  fill: #11161d;
+  stroke: #fff;
+  stroke-width: 1.2;
+}
+
+/* Loading skeleton */
+
+.bone {
+  display: block;
+  height: 14px;
+  width: 45%;
+  border-radius: 3px;
+  background: var(--wash);
+}
+
+.bone.wide {
+  width: 70%;
+  height: 20px;
+}
+
+.bone.strip-bone {
+  width: 100%;
+  height: 12px;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .skeleton .bone {
+    animation: pulse 1.2s ease-in-out infinite;
+  }
+}
+
+@keyframes pulse {
+  50% {
+    opacity: 0.45;
+  }
+}
+
+/* Map */
+
+.map {
+  position: absolute;
+  inset: 0;
+}
+
+.map-loading {
+  display: grid;
+  place-items: center;
+  color: var(--muted);
+  background: var(--wash);
+}
+
+.map-notes {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  right: 56px; /* clear of the zoom buttons */
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 6px;
+  pointer-events: none;
+}
+
+.legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 12px;
+  max-width: 100%;
+  padding: 6px 10px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  background: rgb(255 255 255 / 0.94);
+  border: 1px solid var(--rule);
+  border-radius: var(--radius-sm);
+}
+
+.cp {
+  font-family: 'Overpass Variable', system-ui, sans-serif;
+  font-size: 0.88rem;
+  color: var(--ink);
+}
+
+.cp-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding-right: 22px; /* room for the popup's close button */
+  font-size: 1rem;
+}
+
+.cp p {
+  margin: 2px 0;
+}
+
+.cp-eta {
+  color: var(--muted);
+}
+
+.cp-reason {
+  font-weight: 700;
+}
+
+.cp-wx {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 3px 10px;
+  margin: 8px 0 0;
+}
+
+.cp-wx dt {
+  color: var(--muted);
+}
+
+.cp-wx dd {
+  margin: 0;
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.tag {
+  display: inline-block;
+  padding: 1px 6px;
+  border-radius: 3px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.maplibregl-popup-content {
+  border-radius: var(--radius);
+  padding: 12px 14px;
+  box-shadow: 0 8px 24px rgb(27 36 48 / 0.18);
+}
+
+/* Empty map: an invitation instead of a blank canvas */
+
+.map-invite {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  translate: -50% -50%;
+  z-index: 1;
+  width: min(340px, calc(100% - 32px));
+  padding: 18px 20px;
+  background: rgb(255 255 255 / 0.95);
+  border: 1px solid var(--rule);
+  border-radius: var(--radius);
+  box-shadow: 0 10px 30px rgb(27 36 48 / 0.12);
+  text-align: center;
+  pointer-events: none;
+}
+
+.map-invite p {
+  margin: 12px 0 0;
+  color: var(--muted);
+}
+
+.map-invite strong {
+  display: block;
+  margin-bottom: 2px;
+  font-size: 1.05rem;
+  color: var(--ink);
+}
+
+.invite-road {
+  height: 6px;
+  border-radius: 3px;
+  background: repeating-linear-gradient(90deg, var(--ink) 0 18px, transparent 18px 30px);
+  opacity: 0.25;
+}
+
+/* Time bar over the bottom of the map */
+
+.timebar {
+  position: absolute;
+  left: 12px;
+  right: 12px;
+  bottom: 28px;
+  z-index: 2;
+  display: grid;
+  grid-template-columns: auto 1fr auto auto;
+  grid-template-areas:
+    'play range when layers'
+    'note note note note';
+  align-items: center;
+  gap: 4px 14px;
+  padding: 10px 14px;
+  background: rgb(255 255 255 / 0.96);
+  border: 1px solid var(--rule);
+  border-radius: var(--radius);
+  box-shadow: 0 4px 16px rgb(27 36 48 / 0.12);
+}
+
+.play {
+  grid-area: play;
+  display: grid;
+  place-items: center;
+  width: 36px;
+  height: 36px;
+  border: 0;
+  border-radius: 50%;
+  background: var(--ink);
+  cursor: pointer;
+}
+
+.play svg {
+  width: 14px;
+  height: 14px;
+  fill: #fff;
+}
+
+.hours {
+  grid-area: range;
+  width: 100%;
+  accent-color: var(--blue);
+  cursor: pointer;
+}
+
+.when {
+  grid-area: when;
+  display: grid;
+  min-width: 9.5rem;
+  line-height: 1.2;
+}
+
+.when span {
+  font-size: 0.8rem;
+  color: var(--muted);
+}
+
+.layer-controls {
+  grid-area: layers;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-weight: 600;
+  font-size: 0.87rem;
+  cursor: pointer;
+}
+
+.toggle input {
+  width: 16px;
+  height: 16px;
+  accent-color: var(--blue);
+}
+
+.segmented.small {
+  grid-template-columns: repeat(4, auto);
+}
+
+.segmented.small label {
+  height: 28px;
+  padding: 0 10px;
+  font-size: 0.8rem;
+}
+
+.segmented label:has(input:disabled) {
+  color: #9aa3ad;
+  cursor: default;
+}
+
+.timebar-note {
+  grid-area: note;
+  margin: 0;
+  font-size: 0.82rem;
+  color: var(--muted);
+}
+
+/* Narrower maps: controls wrap under the slider. */
+@media (max-width: 1100px) {
+  .timebar {
+    grid-template-columns: auto 1fr auto;
+    grid-template-areas:
+      'play range when'
+      'layers layers layers'
+      'note note note';
+  }
+}
+
+/* Phones: panel first, map below it. */
+@media (max-width: 820px) {
+  .app {
+    display: block;
+    height: auto;
+  }
+
+  .panel {
+    overflow: visible;
+    border-right: 0;
+    padding: 16px 16px 20px;
+  }
+
+  .map-area {
+    height: 75vh;
+    border-top: 1px solid var(--rule);
+  }
+
+  .timebar {
+    left: 8px;
+    right: 8px;
+    bottom: 24px;
+    gap: 6px 10px;
+    padding: 8px 10px;
+  }
+
+  .when {
+    min-width: 0;
+  }
+}
+
+/* Motion. One page-load moment, then motion only in answer to what the user does.
+   Fill mode is "backwards" so no transform lingers after an animation ends.
+   Everything here is skipped when the system asks for reduced motion. */
+@media (prefers-reduced-motion: no-preference) {
+  .brand,
+  .trip > *,
+  .empty {
+    animation: settle 520ms cubic-bezier(0.2, 0.7, 0.2, 1) backwards;
+  }
+
+  .trip > :nth-child(1) {
+    animation-delay: 60ms;
+  }
+  .trip > :nth-child(2) {
+    animation-delay: 110ms;
+  }
+  .trip > :nth-child(3) {
+    animation-delay: 160ms;
+  }
+  .trip > :nth-child(4) {
+    animation-delay: 210ms;
+  }
+  .trip > :nth-child(5) {
+    animation-delay: 260ms;
+  }
+  .empty {
+    animation-delay: 320ms;
+  }
+
+  .brand-mark {
+    animation: mark-in 640ms cubic-bezier(0.3, 1.4, 0.5, 1) backwards;
+  }
+
+  .brand::after {
+    animation: draw-right 900ms 150ms cubic-bezier(0.33, 1, 0.68, 1) backwards;
+  }
+
+  .swap svg {
+    transition: rotate 320ms cubic-bezier(0.3, 1.3, 0.5, 1);
+  }
+
+  /* Results: cards rise in safest first, and each strip map fills left to right in step
+     with the route drawing itself on the map (same 1.4 s ease-out). */
+  .routes.reveal > .route {
+    animation: settle 460ms cubic-bezier(0.2, 0.7, 0.2, 1) backwards;
+    animation-delay: calc(var(--i) * 90ms);
+  }
+
+  .routes.reveal .strip-bar {
+    animation: draw-right 1400ms cubic-bezier(0.33, 1, 0.68, 1) backwards;
+  }
+
+  .results-head,
+  .status,
+  .scenario-banner {
+    animation: settle 420ms cubic-bezier(0.2, 0.7, 0.2, 1) backwards;
+  }
+
+  .lane::before {
+    animation: lane-move 520ms linear infinite;
+  }
+
+  .lane-truck {
+    animation: truck-bob 260ms ease-in-out infinite alternate;
+  }
+
+  .invite-road {
+    animation: lane-move 1400ms linear infinite;
+  }
+
+  .map-invite {
+    animation: settle 600ms 250ms cubic-bezier(0.2, 0.7, 0.2, 1) backwards;
+  }
+
+  .timebar {
+    animation: rise 420ms 350ms cubic-bezier(0.2, 0.7, 0.2, 1) backwards;
+  }
+
+  .maplibregl-popup-content {
+    animation: pop-in 180ms cubic-bezier(0.2, 0.8, 0.3, 1.2) backwards;
+    transform-origin: 50% 100%;
+  }
+}
+
+@keyframes settle {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+}
+
+@keyframes rise {
+  from {
+    opacity: 0;
+    translate: 0 14px;
+  }
+}
+
+@keyframes mark-in {
+  from {
+    opacity: 0;
+    scale: 0.6;
+  }
+}
+
+@keyframes draw-right {
+  from {
+    clip-path: inset(0 100% 0 0);
+  }
+  to {
+    clip-path: inset(0 0 0 0);
+  }
+}
+
+@keyframes lane-move {
+  to {
+    background-position: -30px 0;
+  }
+}
+
+@keyframes truck-bob {
+  to {
+    translate: 0 -1px;
+  }
+}
+
+@keyframes pop-in {
+  from {
+    opacity: 0;
+    scale: 0.94;
+  }
+}
