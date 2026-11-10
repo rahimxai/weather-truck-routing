@@ -3,8 +3,8 @@ from datetime import UTC, datetime
 import httpx
 import pytest
 
-from routing.adapters import open_meteo, tomtom
-from routing.adapters.http import get_json
+from routing.adapters import http, open_meteo, tomtom
+from routing.adapters.http import backoff, get_json
 from routing.errors import ForecastUnavailable, NoRoute, NotConfigured, UpstreamError
 
 from .fakes import line, tt_route
@@ -230,3 +230,31 @@ def test_forecast_unexpected_unit(apis, monkeypatch):
     monkeypatch.setattr(apis, "open_meteo", odd_units)
     with pytest.raises(UpstreamError):
         open_meteo.forecasts([(-90.0, 40.0)], DEPART, DEPART)
+
+
+def test_backoff_429_uses_retry_after():
+    assert backoff(1, 429, "3") == 3.0
+
+
+def test_backoff_429_retry_after_is_capped():
+    assert backoff(1, 429, "120") == http.MAX_WAIT_S
+
+
+def test_backoff_429_without_header_grows():
+    assert [backoff(i, 429) for i in (1, 2, 3)] == [2.0, 4.0, 5.0]
+
+
+def test_backoff_429_with_date_header_falls_back():
+    assert backoff(1, 429, "Wed, 21 Oct 2026 07:28:00 GMT") == 2.0
+
+
+def test_backoff_5xx_is_short():
+    assert [backoff(i, 503) for i in (1, 2)] == [0.5, 1.0]
+
+
+def test_open_meteo_rate_limit_waits_then_succeeds(apis, monkeypatch):
+    waits = []
+    monkeypatch.setattr(http.time, "sleep", waits.append)
+    apis.fail["api.open-meteo.com"] = [429]
+    assert len(open_meteo.forecasts([(-90.0, 40.0)], DEPART, DEPART)) == 1
+    assert waits == [2.0]

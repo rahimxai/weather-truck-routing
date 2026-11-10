@@ -5,7 +5,7 @@ checks the forecast at regular checkpoints for the time the truck will actually 
 the risk with the assessment's rules (including the load-weight rules), recommends a route and
 says why. A corridor heatmap with a 0–48 hour slider shows how the weather moves around the trip.
 
-- **Live app:** _add the Vercel URL here_
+- **Live app:** https://weather-truck-routing-phi.vercel.app
 - **Walkthrough (Loom):** _add the link here_
 
 ## Features
